@@ -12,5 +12,3 @@ import './plugins'
 import { authStorage } from './storage'
 
 app.mount('#app')
-
-await authStorage.actions.init()

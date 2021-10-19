@@ -14,6 +14,7 @@ export class AxiosService<T, P> {
     try {
       return await surePromise(apiClient.post<AxiosResponse>(url, postData))
     } catch (err) {
+      // @ts-ignore
       if (err && err.response) {
         const axiosError = err as AxiosError
       } else {
@@ -39,6 +40,7 @@ export class AxiosService<T, P> {
       }
       return await surePromise(apiClient.get<AxiosResponse>(dataUrl, config))
     } catch (err) {
+      // @ts-ignore
       if (err && err.response) {
         const axiosError = err as AxiosError
       } else {
@@ -55,6 +57,7 @@ export class AxiosService<T, P> {
     try {
       return surePromise(apiClient.put<AxiosResponse>(url, putData))
     } catch (err) {
+      // @ts-ignore
       if (err && err.response) {
         const axiosError = err as AxiosError
       } else {

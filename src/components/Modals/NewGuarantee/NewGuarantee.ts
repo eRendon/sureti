@@ -1,4 +1,4 @@
-import { computed, defineComponent, ref, shallowRef, triggerRef } from 'vue'
+import { computed, DefineComponent, defineComponent, ref, shallowRef, triggerRef } from 'vue'
 import { modalStore } from '@/storage'
 import Property from '@/components/FlowOnBoarding/Property/Property.vue'
 import Quota from '@/components/FlowOnBoarding/Quota/Quota.vue'
@@ -8,7 +8,7 @@ export default defineComponent({
     setup () {
         const showNewGuarantee = computed(() => modalStore.getters.getStateNewGuarantee())
         const valueProperty = ref(0)
-        const component = shallowRef({
+        const component = shallowRef<{ isComponent: DefineComponent<any, any, any>}>({
             isComponent: Property
         })
 

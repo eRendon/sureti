@@ -1,4 +1,4 @@
-import { computed, defineComponent, onMounted, shallowRef, triggerRef } from 'vue'
+import { computed, DefineComponent, defineComponent, onMounted, shallowRef, triggerRef } from 'vue'
 import Movements from '../../../components/List/Movements/Movements.vue'
 import GuaranteeList from '../../../components/List/Guarantee/Guarantee.vue'
 import Indicator from '@/components/DashBoard/Indicator/Indicator.vue'
@@ -16,7 +16,7 @@ export default defineComponent({
   },
   setup () {
 
-    const component = shallowRef({
+    const component = shallowRef<{ isComponent: DefineComponent<any, any, any>}>({
       isComponent: GuaranteeList
     })
 

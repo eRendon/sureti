@@ -51,7 +51,7 @@ export interface IBankAccountInformation {
 
 export interface IProfile extends IInformation, UserId{
   accept_terms?: true
-  bank_account_information: IBankAccountInformation[]
+  bank_account_information?: IBankAccountInformation[]
   cell_phone?: string
   creation_date?: string
   email?: string

@@ -1,4 +1,4 @@
-import { computed, defineComponent, ref, shallowRef, triggerRef, provide, onMounted } from 'vue'
+import { computed, defineComponent, ref, shallowRef, triggerRef, provide, onMounted, DefineComponent } from 'vue'
 import Loans from '../../../components/FlowOnBoarding/Loans/Loans.vue'
 import Property from '../../../components/FlowOnBoarding/Property/Property.vue'
 import Quota from '../../../components/FlowOnBoarding/Quota/Quota.vue'
@@ -7,7 +7,7 @@ import { useRoute } from 'vue-router'
 export default defineComponent({
   name: 'LoansView',
   setup () {
-    const component = shallowRef({
+    const component = shallowRef<{ isComponent: any}>({
       isComponent: Property
     })
 

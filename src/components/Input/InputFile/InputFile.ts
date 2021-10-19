@@ -14,8 +14,7 @@ export default defineComponent({
         user_id: auth.value.user_id!,
         description: '',
         file_name: '',
-        doc_type: '',
-        file: ''
+        doc_type: ''
       }
       const { data, success } = await fileRequest.sendUserDocument(userDocument)
       console.log(data)
@@ -31,7 +30,6 @@ export default defineComponent({
         description: '',
         file_name: '',
         doc_type: '',
-        file: '',
         payment_id: ''
       }
       const { data, success } = await fileRequest.sendPaymentDocument(userDocument)
@@ -48,7 +46,6 @@ export default defineComponent({
         description: '',
         file_name: '',
         doc_type: '',
-        file: '',
         guarantee_id: ''
       }
       const { data, success } = await fileRequest.sendGuaranteeDocument(userDocument)
@@ -58,7 +55,7 @@ export default defineComponent({
       }
     }
 
-    const onUploadFile = (file): void => {
+    const onUploadFile = (file: File): void => {
       console.log(file)
     }
 
